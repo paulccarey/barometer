@@ -47,7 +47,7 @@ module Barometer
 
     # analyze the saved query to determine the format.
     # this delegates the detection to each formats class
-    # until th right one is found
+    # until the right one is found
     #
     def analyze!
       return unless @q
