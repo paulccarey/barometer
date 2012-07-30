@@ -1,0 +1,164 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?region=&sensor=false&latlng=27.17461%2C78.0447
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Mon, 30 Jul 2012 23:14:10 GMT
+      expires:
+      - Tue, 31 Jul 2012 23:14:10 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"results\" : [\n      {\n         \"address_components\" :
+        [\n            {\n               \"long_name\" : \"2\",\n               \"short_name\"
+        : \"2\",\n               \"types\" : [ \"street_number\" ]\n            },\n
+        \           {\n               \"long_name\" : \"State HIghway 62\",\n               \"short_name\"
+        : \"SH 62\",\n               \"types\" : [ \"route\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Tajganj\",\n               \"short_name\"
+        : \"Tajganj\",\n               \"types\" : [ \"sublocality\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"Agra\",\n
+        \              \"short_name\" : \"Agra\",\n               \"types\" : [ \"locality\",
+        \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Agra\",\n               \"short_name\" : \"Agra\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Uttar Pradesh\",\n               \"short_name\"
+        : \"UP\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"India\",\n
+        \              \"short_name\" : \"IN\",\n               \"types\" : [ \"country\",
+        \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"2, State HIghway 62, Tajganj, Agra, Uttar Pradesh, India\",\n         \"geometry\"
+        : {\n            \"bounds\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 27.17121760,\n                  \"lng\" : 78.03911370\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 27.17100790,\n
+        \                 \"lng\" : 78.03903240\n               }\n            },\n
+        \           \"location\" : {\n               \"lat\" : 27.1712180,\n               \"lng\"
+        : 78.03903330\n            },\n            \"location_type\" : \"RANGE_INTERPOLATED\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 27.17246173029150,\n                  \"lng\" : 78.04042203029151\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 27.16976376970850,\n
+        \                 \"lng\" : 78.03772406970850\n               }\n            }\n
+        \        },\n         \"types\" : [ \"street_address\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Tajganj\",\n               \"short_name\" : \"Tajganj\",\n               \"types\"
+        : [ \"sublocality\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Shamsabad\",\n               \"short_name\" : \"Shamsabad\",\n               \"types\"
+        : [ \"locality\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Agra\",\n               \"short_name\" : \"Agra\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Uttar Pradesh\",\n               \"short_name\"
+        : \"UP\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"India\",\n
+        \              \"short_name\" : \"IN\",\n               \"types\" : [ \"country\",
+        \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Tajganj, Shamsabad, Uttar Pradesh, India\",\n         \"geometry\" : {\n
+        \           \"bounds\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 27.1870450,\n                  \"lng\" : 78.07427469999999\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 27.13278080,\n
+        \                 \"lng\" : 78.02511079999999\n               }\n            },\n
+        \           \"location\" : {\n               \"lat\" : 27.15956870,\n               \"lng\"
+        : 78.0480750\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 27.1870450,\n                  \"lng\" : 78.07427469999999\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 27.13278080,\n
+        \                 \"lng\" : 78.02511079999999\n               }\n            }\n
+        \        },\n         \"types\" : [ \"sublocality\", \"political\" ]\n      },\n
+        \     {\n         \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Agra\",\n               \"short_name\" : \"Agra\",\n               \"types\"
+        : [ \"locality\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Agra\",\n               \"short_name\" : \"Agra\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Uttar Pradesh\",\n               \"short_name\"
+        : \"UP\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"India\",\n
+        \              \"short_name\" : \"IN\",\n               \"types\" : [ \"country\",
+        \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Agra, Uttar Pradesh, India\",\n         \"geometry\" : {\n            \"bounds\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 27.24086670,\n
+        \                 \"lng\" : 78.05505590\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 27.14247720,\n                  \"lng\" :
+        77.96795370\n               }\n            },\n            \"location\" :
+        {\n               \"lat\" : 27.17667010,\n               \"lng\" : 78.00807449999999\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 27.24086670,\n
+        \                 \"lng\" : 78.05505590\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 27.14247720,\n                  \"lng\" :
+        77.96795370\n               }\n            }\n         },\n         \"types\"
+        : [ \"locality\", \"political\" ]\n      },\n      {\n         \"address_components\"
+        : [\n            {\n               \"long_name\" : \"Agra\",\n               \"short_name\"
+        : \"Agra\",\n               \"types\" : [ \"administrative_area_level_2\",
+        \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Uttar Pradesh\",\n               \"short_name\" : \"UP\",\n               \"types\"
+        : [ \"administrative_area_level_1\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"India\",\n               \"short_name\" :
+        \"IN\",\n               \"types\" : [ \"country\", \"political\" ]\n            }\n
+        \        ],\n         \"formatted_address\" : \"Agra, Uttar Pradesh, India\",\n
+        \        \"geometry\" : {\n            \"bounds\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 27.2439360,\n                  \"lng\" :
+        78.97521970\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 26.74928950,\n                  \"lng\" : 77.60332319999999\n               }\n
+        \           },\n            \"location\" : {\n               \"lat\" : 26.97346520,\n
+        \              \"lng\" : 78.38422270\n            },\n            \"location_type\"
+        : \"APPROXIMATE\",\n            \"viewport\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 27.2439360,\n                  \"lng\" :
+        78.97521970\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 26.74928950,\n                  \"lng\" : 77.60332319999999\n               }\n
+        \           }\n         },\n         \"types\" : [ \"administrative_area_level_2\",
+        \"political\" ]\n      },\n      {\n         \"address_components\" : [\n
+        \           {\n               \"long_name\" : \"Uttar Pradesh\",\n               \"short_name\"
+        : \"UP\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"India\",\n
+        \              \"short_name\" : \"IN\",\n               \"types\" : [ \"country\",
+        \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Uttar Pradesh, India\",\n         \"geometry\" : {\n            \"bounds\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 30.4116350,\n
+        \                 \"lng\" : 84.67432690\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 23.8708390,\n                  \"lng\" :
+        77.09243690\n               }\n            },\n            \"location\" :
+        {\n               \"lat\" : 27.57058860,\n               \"lng\" : 80.09818690\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 30.4116350,\n
+        \                 \"lng\" : 84.67432690\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 23.8708390,\n                  \"lng\" :
+        77.09243690\n               }\n            }\n         },\n         \"types\"
+        : [ \"administrative_area_level_1\", \"political\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"India\",\n               \"short_name\" : \"IN\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"India\",\n         \"geometry\" : {\n            \"bounds\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 35.50715640,\n                  \"lng\" :
+        97.3955550\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 6.747138899999999,\n                  \"lng\" : 68.16238590\n               }\n
+        \           },\n            \"location\" : {\n               \"lat\" : 20.5936840,\n
+        \              \"lng\" : 78.962880\n            },\n            \"location_type\"
+        : \"APPROXIMATE\",\n            \"viewport\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 35.50715640,\n                  \"lng\" :
+        97.3955550\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 6.747138899999999,\n                  \"lng\" : 68.16279560\n               }\n
+        \           }\n         },\n         \"types\" : [ \"country\", \"political\"
+        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Mon, 30 Jul 2012 23:14:10 GMT
+recorded_with: VCR 2.2.4

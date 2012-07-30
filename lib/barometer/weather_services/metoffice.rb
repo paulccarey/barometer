@@ -36,6 +36,11 @@ module Barometer
       def _requires_keys?
         true
       end
+      
+      def _supports_country?(query=nil)
+        query = WebService::Geocode.fetch(query) if query.format == :coordinates
+        query.country_code == "GB"
+      end
 
       def keys=(keys)
         raise ArgumentError unless keys.is_a?(Hash)

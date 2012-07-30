@@ -97,14 +97,24 @@ describe "Metoffice" do
       end
     end
 
-    describe "_supports_country?" do
+    describe "_supports_country?", :vcr do
+
+      before do
+        @uk_query = Barometer::Query.new("53.432996,-3.078296")
+        @india_query = Barometer::Query.new("27.17461,78.0447")
+      end
+
+      it "geocodes the location when coordinates query" do
+        WebService::Geocode.should_receive(:fetch).and_return( stub(:country_code => "GB" ) )
+        WeatherService::Metoffice._supports_country?(@uk_query)
+      end
 
       it "should return true for UK" do
-        pending
+        WeatherService::Metoffice::_supports_country?(@uk_query).should be_true
       end
 
       it "should return false for non UK country" do
-        pending
+        WeatherService::Metoffice::_supports_country?(@india_query).should be_false
       end
 
     end
