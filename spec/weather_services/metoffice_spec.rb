@@ -7,6 +7,7 @@ describe "Metoffice" do
     @accepted_formats = [:coordinates]
     @base_uri = "http://partner.metoffice.gov.uk"
     @api_key = "1ab12345-1a12-12a1-12a1-123456789123"
+    @coordinates = "53.432996,-3.078296"
     Barometer.config = { 1 => [ {:metoffice => {:keys => {:api_key => METOFFICE_KEY } }}] }
   end
   
@@ -28,9 +29,10 @@ describe "Metoffice" do
          WeatherService::Metoffice._requires_keys?.should be_true
      end
      
-     it "returns the configured api key" do
-       pending
-       #WeatherService::Metoffice.api_key.should == METOFFICE_KEY
+     it "sets the configured api key on measure" do
+       WeatherService::Metoffice.stub(:measure) { stub("success?"=>true) }
+       Barometer.new(@coordinates).measure
+       WeatherService::Metoffice.api_key.should == METOFFICE_KEY
      end
     
     it "defines _fetch" do
@@ -75,7 +77,8 @@ describe "Metoffice" do
     describe "_fetch", :vcr do
 
       before(:all) do
-        @query = Barometer::Query.new("53.432996,-3.078296")
+        @coordinates = "53.432996,-3.078296"
+        @query = Barometer::Query.new(@coordinates)
         @expected_url = "http://partner.metoffice.gov.uk/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=53.432996&lon=-3.078296&key=#{METOFFICE_KEY}"
         WeatherService::Metoffice.api_key = METOFFICE_KEY
       end

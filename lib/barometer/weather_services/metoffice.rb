@@ -40,7 +40,7 @@ module Barometer
       def keys=(keys)
         raise ArgumentError unless keys.is_a?(Hash)
         raise(ArgumentError, "Mettoffice API key should be String") unless keys[:api_key].is_a?(String)
-        api_key = keys[:api_key]
+        @api_key=keys[:api_key]
       end
 
       def _has_keys?
