@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("rspec", "~> 2.6")
   s.add_development_dependency("mocha")
   s.add_development_dependency("fakeweb")
+  s.add_development_dependency("vcr")
   s.add_development_dependency("rake")
 end
 

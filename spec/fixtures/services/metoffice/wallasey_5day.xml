@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteRep>
+    <Wx>
+        <Param units="C" name="F">Feels Like Temperature</Param>
+        <Param units="mph" name="G">Wind Gust</Param>
+        <Param units="%" name="H">Screen Relative Humidity</Param>
+        <Param units="C" name="T">Temperature</Param>
+        <Param units="" name="V">Visibility</Param>
+        <Param units="compass" name="D">Wind Direction</Param>
+        <Param units="mph" name="S">Wind Speed</Param>
+        <Param units="" name="U">Max Uv Index</Param>
+        <Param units="" name="W">Weather Type</Param>
+        <Param units="%" name="Pp">Precipitation Probability</Param>
+    </Wx>
+    <DV type="Forecast" dataDate="2012-07-30T19:00:00Z">
+        <Location continent="EUROPE" country="ENGLAND" name="WALLASEY" lon="-3.06" lat="53.43" i="354059">
+            <Period val="2012-07-30Z" type="Day">
+                <Rep U="1" W="1" V="VG" T="15" S="15" Pp="5" H="63" G="23" F="12" D="WNW">1080</Rep>
+                <Rep U="0" W="0" V="VG" T="14" S="6" Pp="5" H="73" G="14" F="13" D="WSW">1260</Rep>
+            </Period>
+            <Period val="2012-07-31Z" type="Day">
+                <Rep U="0" W="0" V="GO" T="12" S="5" Pp="5" H="80" G="9" F="11" D="SSE">0</Rep>
+                <Rep U="0" W="7" V="MO" T="12" S="8" Pp="20" H="89" G="15" F="10" D="SE">180</Rep>
+                <Rep U="1" W="7" V="MO" T="12" S="12" Pp="40" H="92" G="20" F="9" D="ESE">360</Rep>
+                <Rep U="1" W="12" V="MO" T="13" S="13" Pp="60" H="90" G="22" F="10" D="ESE">540</Rep>
+                <Rep U="1" W="12" V="MO" T="14" S="11" Pp="60" H="89" G="20" F="12" D="SE">720</Rep>
+                <Rep U="1" W="15" V="MO" T="15" S="9" Pp="80" H="96" G="16" F="13" D="SSE">900</Rep>
+                <Rep U="1" W="15" V="MO" T="16" S="7" Pp="95" H="95" G="12" F="15" D="S">1080</Rep>
+                <Rep U="0" W="15" V="MO" T="16" S="10" Pp="80" H="95" G="18" F="14" D="SSE">1260</Rep>
+            </Period>
+            <Period val="2012-08-01Z" type="Day">
+                <Rep U="0" W="15" V="MO" T="15" S="13" Pp="80" H="95" G="22" F="13" D="SSE">0</Rep>
+                <Rep U="0" W="15" V="MO" T="15" S="14" Pp="80" H="95" G="23" F="13" D="SSE">180</Rep>
+                <Rep U="1" W="12" V="MO" T="16" S="14" Pp="60" H="95" G="24" F="13" D="SSE">360</Rep>
+                <Rep U="1" W="10" V="GO" T="16" S="17" Pp="40" H="92" G="29" F="14" D="SSE">540</Rep>
+                <Rep U="2" W="14" V="GO" T="18" S="18" Pp="60" H="84" G="32" F="14" D="SSE">720</Rep>
+                <Rep U="2" W="10" V="GO" T="19" S="16" Pp="40" H="80" G="32" F="16" D="SSE">900</Rep>
+                <Rep U="1" W="14" V="GO" T="18" S="15" Pp="60" H="83" G="28" F="15" D="S">1080</Rep>
+                <Rep U="0" W="12" V="GO" T="17" S="14" Pp="60" H="85" G="25" F="15" D="SW">1260</Rep>
+            </Period>
+            <Period val="2012-08-02Z" type="Day">
+                <Rep U="0" W="7" V="VG" T="16" S="11" Pp="20" H="83" G="20" F="14" D="SW">0</Rep>
+                <Rep U="0" W="7" V="GO" T="14" S="10" Pp="20" H="86" G="17" F="13" D="SW">180</Rep>
+                <Rep U="1" W="1" V="GO" T="14" S="9" Pp="5" H="83" G="15" F="12" D="SSW">360</Rep>
+                <Rep U="2" W="3" V="VG" T="17" S="11" Pp="20" H="69" G="21" F="15" D="SSW">540</Rep>
+                <Rep U="3" W="7" V="VG" T="19" S="12" Pp="20" H="59" G="24" F="16" D="SW">720</Rep>
+                <Rep U="2" W="3" V="VG" T="20" S="12" Pp="20" H="51" G="25" F="17" D="SW">900</Rep>
+                <Rep U="1" W="10" V="VG" T="18" S="11" Pp="40" H="58" G="20" F="16" D="SW">1080</Rep>
+                <Rep U="0" W="7" V="VG" T="16" S="10" Pp="20" H="72" G="15" F="14" D="SSW">1260</Rep>
+            </Period>
+            <Period val="2012-08-03Z" type="Day">
+                <Rep U="0" W="2" V="VG" T="14" S="12" Pp="5" H="78" G="21" F="12" D="S">0</Rep>
+                <Rep U="0" W="2" V="GO" T="14" S="13" Pp="5" H="83" G="21" F="12" D="SSE">180</Rep>
+                <Rep U="1" W="3" V="GO" T="14" S="13" Pp="5" H="84" G="23" F="11" D="SSE">360</Rep>
+                <Rep U="2" W="3" V="GO" T="16" S="15" Pp="20" H="79" G="25" F="13" D="SSE">540</Rep>
+                <Rep U="3" W="14" V="GO" T="18" S="14" Pp="60" H="71" G="28" F="15" D="S">720</Rep>
+                <Rep U="1" W="14" V="GO" T="18" S="13" Pp="60" H="71" G="24" F="15" D="S">900</Rep>
+                <Rep U="1" W="10" V="GO" T="18" S="13" Pp="40" H="69" G="23" F="15" D="S">1080</Rep>
+                <Rep U="0" W="7" V="GO" T="16" S="13" Pp="20" H="81" G="23" F="14" D="S">1260</Rep>
+            </Period>
+            <Period val="2012-08-04Z" type="Day">
+                <Rep U="0" W="7" V="GO" T="15" S="13" Pp="20" H="86" G="22" F="13" D="S">0</Rep>
+                <Rep U="0" W="7" V="GO" T="15" S="12" Pp="20" H="89" G="20" F="13" D="S">180</Rep>
+                <Rep U="1" W="3" V="GO" T="15" S="11" Pp="20" H="88" G="19" F="13" D="S">360</Rep>
+                <Rep U="2" W="14" V="GO" T="16" S="12" Pp="60" H="81" G="21" F="14" D="S">540</Rep>
+                <Rep U="2" W="30" V="GO" T="17" S="11" Pp="80" H="77" G="20" F="15" D="SSW">720</Rep>
+                <Rep U="1" W="14" V="GO" T="16" S="8" Pp="60" H="80" G="15" F="15" D="SSW">900</Rep>
+                <Rep U="1" W="14" V="VG" T="16" S="7" Pp="60" H="80" G="11" F="16" D="SSW">1080</Rep>
+            </Period>
+        </Location>
+    </DV>
+</SiteRep>

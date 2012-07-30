@@ -8,7 +8,7 @@ WEATHER_PARTNER_KEY = "1234"
 WEATHER_LICENSE_KEY = "12345"
 WEATHERBUG_CODE = "A9999"
 YAHOO_KEY = "YAHOO"
-
+METOFFICE_KEY = "1ab12345-1a12-12a1-12a1-123456789123"
 #
 # for geocoding
 #
@@ -200,3 +200,13 @@ FakeWeb.register_uri(:get,
   "http://forecast.weather.gov/MapClick.php?&textField1=34.10&textField2=-118.41",
   :body => File.read(File.dirname(__FILE__) + '/fixtures/services/noaa/station_34_118.html')
 )
+
+#
+# For Metoffice data point searches
+# 
+# http://partner.metoffice.gov.uk/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=53.432996&lon=-3.078296&key=1ab12345-1a12-12a1-12a1-123456789123
+#FakeWeb.register_uri(:get, 
+#  "http://partner.metoffice.gov.uk/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=53.432996&lon=-3.078296&key=#{METOFFICE_KEY}",
+#  :body => File.read(File.dirname(__FILE__) + '/fixtures/services/metoffice/wallasey_5day.xml')
+#)
+

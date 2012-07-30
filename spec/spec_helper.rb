@@ -4,6 +4,7 @@ require 'mocha'
 require 'cgi'
 
 require File.expand_path(File.dirname(__FILE__) + '/fakeweb_helper')
+require File.expand_path(File.dirname(__FILE__) + '/vcr_helper')
 
 $:.unshift((File.join(File.dirname(__FILE__), '..', 'lib')))
 require 'barometer'

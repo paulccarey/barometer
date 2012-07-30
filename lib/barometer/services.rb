@@ -9,6 +9,7 @@ require 'weather_services/yahoo'
 require 'weather_services/weather_dot_com'
 require 'weather_services/weather_bug'
 require 'weather_services/noaa'
+require 'weather_services/metoffice'
 
 #
 # web services (non weather)
