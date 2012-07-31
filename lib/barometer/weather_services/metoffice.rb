@@ -63,6 +63,23 @@ module Barometer
         get("#{base_uri}/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=#{latitude}&lon=#{longitude}&key=#{api_key}")["SiteRep"]["DV"]
       end
 
+      def _build_current(data,metric=true)
+        raise ArgumentError unless data.is_a?(Hash)
+        current = Measurement::Result.new(metric)
+        unless data.blank?
+          current.condition = weather_type[data["W"].to_i] unless data["W"].blank?
+          current.temperature=Data::Temperature.new(metric)
+          current.temperature.c=data["T"].to_i
+        end
+        current
+      end
+
+      private
+
+      def weather_type
+        @weather_type ||= YAML.load_file( File.expand_path( File.join(File.dirname(__FILE__), '..','translations', 'metoffice_weather_types.yml')) )
+      end
+
     end
 
   end
