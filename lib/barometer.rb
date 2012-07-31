@@ -1,4 +1,5 @@
 $:.unshift(File.dirname(__FILE__))
+require 'active_support/core_ext/object/blank'
 
 require 'barometer/base'
 require 'barometer/query'
