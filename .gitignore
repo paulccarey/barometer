@@ -6,7 +6,6 @@ pkg
 lib/attic
 coverage
 *.gem
-
-.rvmrc
 .bundle
-Gemfile.lock
+.idea
+tags
