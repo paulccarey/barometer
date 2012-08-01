@@ -70,6 +70,7 @@ module Barometer
           current.condition = weather_type[data["W"].to_i] unless data["W"].blank?
           current.temperature=Data::Temperature.new(metric)
           current.temperature.c=data["T"].to_i
+          current.humidity=data["H"].to_i
         end
         current
       end

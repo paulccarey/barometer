@@ -198,6 +198,12 @@ describe "Metoffice" do
           @current_conditions.temperature.f(false).should == 60.8
         end 
 
+        it "should return 94 for humidity" do 
+          @current_conditions.humidity=94
+        end
+
+        
+
       end
 
 
