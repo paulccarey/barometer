@@ -14,6 +14,7 @@ module Barometer
     attr_reader :temperature, :dew_point, :heat_index, :wind_chill
     attr_reader :low, :high, :pop
     attr_reader :wind, :sun, :pressure, :visibility
+    attr_reader :uv_index
     attr_accessor :metric, :description
     
     def initialize(metric=true); @metric = metric; end
@@ -116,6 +117,11 @@ module Barometer
     def sun=(sun)
       raise ArgumentError unless (sun.is_a?(Data::Sun) || sun.nil?)
       @sun = sun
+    end
+
+    def uv_index=(uv_index)
+      raise ArgumentError unless uv_index.is_a?(Fixnum)
+      @uv_index=uv_index
     end
     
     #

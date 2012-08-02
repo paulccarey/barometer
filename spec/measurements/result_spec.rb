@@ -5,7 +5,7 @@ describe "Result Measurement" do
   describe "when initialized" do
     
     before(:each) do
-      @result = Measurement::Result.new
+      @result = Barometer::Measurement::Result.new
     end
     
     it "responds to temperature" do
@@ -87,6 +87,10 @@ describe "Result Measurement" do
     it "responds to sun" do
       @result.sun.should be_nil
     end
+
+    it "responds to uv index" do
+      @result.uv_index.should be_nil
+    end
     
     it "responds to metric" do
       @result.metric.should be_true
@@ -103,7 +107,7 @@ describe "Result Measurement" do
   describe "when writing data" do
     
     before(:each) do
-      @result = Measurement::Result.new
+      @result = Barometer::Measurement::Result.new
     end
     
     it "only accepts Data::Temperature for temperature" do
@@ -257,7 +261,7 @@ describe "Result Measurement" do
     end
     
     it "sets valid_start_date and valid_end_date if given date" do
-      forecast = Measurement::Result.new
+      forecast = Barometer::Measurement::Result.new
       forecast.valid_start_date.should be_nil
       forecast.valid_end_date.should be_nil
       date = Date.new(2009,05,05)
@@ -280,13 +284,13 @@ describe "Result Measurement" do
     end
     
     it "returns true if the valid_date range includes the given date" do
-      forecast = Measurement::Result.new
+      forecast = Barometer::Measurement::Result.new
       forecast.date = Date.new(2009,05,05)
       forecast.for_datetime?(Data::LocalDateTime.new(2009,5,5,12,0,0)).should be_true
     end
     
     it "returns false if the valid_date range excludes the given date" do
-      forecast = Measurement::Result.new
+      forecast = Barometer::Measurement::Result.new
       forecast.date = Date.new(2009,05,05)
       forecast.for_datetime?(Data::LocalDateTime.new(2009,5,4,12,0,0)).should be_false
     end
@@ -345,13 +349,30 @@ describe "Result Measurement" do
       valid_data.class.should == Data::Sun
       lambda { @result.sun = valid_data }.should_not raise_error(ArgumentError)
     end
-    
+
+    describe "uv index" do
+
+      it "should raise Argument error when not passed a Fixnum" do
+        lambda { @result.uv_index = "HIGH" }.should raise_error(ArgumentError)
+      end
+
+      it "only accepts a Fixnum" do
+        lambda { @result.uv_index = 2 }.should_not raise_error(ArgumentError)
+      end
+
+      it "should set the uv index" do
+        @result.uv_index=2
+        @result.uv_index.should == 2
+      end
+
+    end
+
   end
   
   describe "method missing" do
     
     before(:each) do
-      @result = Measurement::Result.new
+      @result = Barometer::Measurement::Result.new
     end
     
     it "responds to method + ?" do
@@ -382,7 +403,7 @@ describe "Result Measurement" do
   describe "answer simple questions, like" do
     
     before(:each) do
-      @result = Measurement::Result.new
+      @result = Barometer::Measurement::Result.new
       @result.temperature = Data::Temperature.new
       @result.temperature << 5
       @dew_point = Data::Temperature.new
