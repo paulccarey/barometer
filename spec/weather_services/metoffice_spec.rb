@@ -199,7 +199,11 @@ describe "Metoffice" do
         end 
 
         it "should return 94 for humidity" do 
-          @current_conditions.humidity=94
+          @current_conditions.humidity.should == 94
+        end
+
+        it "should set uv index to 1" do
+          @current_conditions.uv_index.should == 1
         end
 
         

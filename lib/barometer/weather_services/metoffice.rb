@@ -67,6 +67,7 @@ module Barometer
         raise ArgumentError unless data.is_a?(Hash)
         current = Measurement::Result.new(metric)
         unless data.blank?
+          current.uv_index=data["U"].to_i
           current.condition = weather_type[data["W"].to_i] unless data["W"].blank?
           current.temperature=Data::Temperature.new(metric)
           current.temperature.c=data["T"].to_i
