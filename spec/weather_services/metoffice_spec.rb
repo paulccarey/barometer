@@ -202,18 +202,17 @@ describe "Metoffice" do
           @current_conditions.humidity.should == 94
         end
 
-        it "should set uv index to 1" do
+        it "should return 1 for uv index" do
           @current_conditions.uv_index.should == 1
         end
 
-        it "should set visibility in kilometers to 15" do
+        it "should return 15 for visibility in kilometers" do
           @current_conditions.visibility.kilometers = 15
         end
 
-        it "should set visibility in miles to 9.33" do
+        it "should return 9.33 for visibility in miles" do
           @current_conditions.visibility.miles = 9.33
         end
-
 
       end
 
