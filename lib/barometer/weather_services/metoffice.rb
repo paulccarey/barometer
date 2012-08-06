@@ -72,6 +72,8 @@ module Barometer
           current.temperature=Data::Temperature.new(metric)
           current.temperature.c=data["T"].to_i
           current.humidity=data["H"].to_i
+          current.visibility = Data::Distance.new(metric)
+          current.visibility << data['V']
         end
         current
       end
@@ -80,6 +82,10 @@ module Barometer
 
       def weather_type
         @weather_type ||= YAML.load_file( File.expand_path( File.join(File.dirname(__FILE__), '..','translations', 'metoffice_weather_types.yml')) )
+      end
+
+      def visibility
+        @visibility ||= YAML.load_file( File.expand_path( File.join(File.dirname(__FILE__), '..','translations', 'metoffice_visibility.yml')) )
       end
 
     end

@@ -1,7 +1,8 @@
-UN : Unknown
-VP : Very poor - Less than 1 km
-PO : Poor - Between 1-4 km
-MO : Moderate - Between 4-10 km
-GO : Good - Between 10-20 km
-VG : Very good - Between 20-40 km
-EX : Excellent - More than 40 km
+--- 
+UN: 
+VP: 0.5
+PO: 2.5
+MO: 7
+GO: 15
+VG: 30
+EX: 50

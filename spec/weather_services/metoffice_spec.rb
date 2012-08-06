@@ -206,7 +206,14 @@ describe "Metoffice" do
           @current_conditions.uv_index.should == 1
         end
 
-        
+        it "should set visibility in kilometers to 15" do
+          @current_conditions.visibility.kilometers = 15
+        end
+
+        it "should set visibility in miles to 9.33" do
+          @current_conditions.visibility.miles = 9.33
+        end
+
 
       end
 
