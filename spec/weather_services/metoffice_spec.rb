@@ -222,6 +222,10 @@ describe "Metoffice" do
           @current_conditions.wind.kph.should == 11
         end
 
+        it "should return 95 for pop" do
+          @current_conditions.pop.should == 95
+        end
+
       end
 
 
