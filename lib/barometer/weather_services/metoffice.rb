@@ -76,6 +76,7 @@ module Barometer
           current.visibility.km=visibility[data['V']]
           current.wind = Data::Speed.new(metric)
           current.wind.mph=data['S'].to_i
+          current.wind.direction=data['D']
           current.pop=data['Pp'].to_i
           current.wind_gust = Data::Speed.new(metric)
           current.wind_gust.mph=data['G'].to_i
