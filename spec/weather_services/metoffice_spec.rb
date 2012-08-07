@@ -226,6 +226,14 @@ describe "Metoffice" do
           @current_conditions.pop.should == 95
         end
 
+        it "should return 14 for wind_gust in mph" do
+          @current_conditions.wind_gust.mph.should == 14
+        end
+
+        it "should return 22 for wind_gust in kph" do
+          @current_conditions.wind_gust.kph.should == 22
+        end
+
       end
 
 
