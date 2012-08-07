@@ -116,7 +116,7 @@ module Barometer
 
     def wind_gust=(wind_gust)
       raise ArgumentError unless wind_gust.is_a?(Data::Speed)
-      @windgust = wind_gust
+      @wind_gust = wind_gust
     end
 
     def sun=(sun)
