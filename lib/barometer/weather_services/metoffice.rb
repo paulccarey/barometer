@@ -79,6 +79,8 @@ module Barometer
           current.pop=data['Pp'].to_i
           current.wind_gust = Data::Speed.new(metric)
           current.wind_gust.mph=data['G'].to_i
+          current.wind_chill=Data::Temperature.new(metric)
+          current.wind_chill.c=data["F"].to_i
         end
         current
       end

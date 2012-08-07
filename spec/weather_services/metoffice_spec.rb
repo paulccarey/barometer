@@ -234,6 +234,15 @@ describe "Metoffice" do
           @current_conditions.wind_gust.kph.should == 22
         end
 
+        it "should return 15 for wind wind_chill in Celsius" do
+          @current_conditions.wind_chill.c.should == 15
+
+        end
+
+        it "should return 59 for wind_chill in Fahrenheit" do
+          @current_conditions.wind_chill.f.should == 59
+        end
+
       end
 
 
