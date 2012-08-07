@@ -13,7 +13,7 @@ module Barometer
     attr_reader :humidity, :icon, :condition
     attr_reader :temperature, :dew_point, :heat_index, :wind_chill
     attr_reader :low, :high, :pop
-    attr_reader :wind, :sun, :pressure, :visibility
+    attr_reader :wind, :wind_gust, :sun, :pressure, :visibility
     attr_reader :uv_index
     attr_accessor :metric, :description
     
@@ -113,7 +113,12 @@ module Barometer
       raise ArgumentError unless wind.is_a?(Data::Speed)
       @wind = wind
     end
-    
+
+    def wind_gust=(wind_gust)
+      raise ArgumentError unless wind_gust.is_a?(Data::Speed)
+      @windgust = wind_gust
+    end
+
     def sun=(sun)
       raise ArgumentError unless (sun.is_a?(Data::Sun) || sun.nil?)
       @sun = sun

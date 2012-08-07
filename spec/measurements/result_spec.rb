@@ -91,6 +91,10 @@ describe "Result Measurement" do
     it "responds to uv index" do
       @result.uv_index.should be_nil
     end
+
+    it "responds to wind_gust" do
+      @result.wind_gust.should be_nil
+    end
     
     it "responds to metric" do
       @result.metric.should be_true
@@ -338,6 +342,16 @@ describe "Result Measurement" do
       valid_data = Data::Speed.new
       valid_data.class.should == Data::Speed
       lambda { @result.wind = valid_data }.should_not raise_error(ArgumentError)
+    end
+
+    it "only accepts Data::Speed for wind_gust" do
+      invalid_data = 1
+      invalid_data.class.should_not == Data::Speed
+      lambda { @result.wind_gust = invalid_data }.should raise_error(ArgumentError)
+
+      valid_data = Data::Speed.new
+      valid_data.class.should == Data::Speed
+      lambda { @result.wind_gust = valid_data }.should_not raise_error(ArgumentError)
     end
     
     it "only accepts Data::Sun for sun" do
