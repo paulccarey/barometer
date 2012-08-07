@@ -73,7 +73,9 @@ module Barometer
           current.temperature.c=data["T"].to_i
           current.humidity=data["H"].to_i
           current.visibility = Data::Distance.new(metric)
-          current.visibility << data['V']
+          current.visibility.km=visibility[data['V']]
+          current.wind = Data::Speed.new(metric)
+          current.wind.mph=data['S'].to_i
         end
         current
       end

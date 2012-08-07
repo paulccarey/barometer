@@ -207,11 +207,19 @@ describe "Metoffice" do
         end
 
         it "should return 15 for visibility in kilometers" do
-          @current_conditions.visibility.kilometers = 15
+          @current_conditions.visibility.km.should == 15
         end
 
         it "should return 9.33 for visibility in miles" do
-          @current_conditions.visibility.miles = 9.33
+          @current_conditions.visibility.m.should == 9
+        end
+
+        it "should return 7 for wind speed in mph" do
+          @current_conditions.wind.mph.should == 7
+        end
+
+        it "should return 11.263 for wind speed in kph" do
+          @current_conditions.wind.kph.should == 11
         end
 
       end
