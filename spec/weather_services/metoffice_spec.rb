@@ -145,6 +145,21 @@ describe "Metoffice" do
 
     end
 
+    describe "_current_result" do
+
+      let(:result_set) do
+        YAML.load_file( File.expand_path( File.join( File.dirname(__FILE__), '../','fixtures','services', 'metoffice', 'sample_result.yaml') ) )
+      end
+
+      it "should return the very rep values" do
+        WeatherService::Metoffice._current_result(result_set).should == { "__content__"=>"1080", "U"=>"1", "W"=>"1",
+                                                                          "V"=>"GO", "T"=>"16", "S"=>"14", "Pp"=>"5",
+                                                                          "H"=>"95", "G"=>"23", "F"=>"14", "D"=>"WNW"}
+      end
+
+
+    end
+
     describe "_build_current", :vcr => {:cassette_name => "metoffice_service", :record => :new_episodes} do
 
       context "method setup" do

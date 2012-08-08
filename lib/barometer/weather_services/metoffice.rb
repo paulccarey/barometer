@@ -63,6 +63,10 @@ module Barometer
         get("#{base_uri}/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=#{latitude}&lon=#{longitude}&key=#{api_key}")["SiteRep"]["DV"]
       end
 
+      def _current_result(data=nil)
+        data["Location"]["Period"].first["Rep"].first
+      end
+
       def _build_current(data,metric=true)
         raise ArgumentError unless data.is_a?(Hash)
         current = Measurement::Result.new(metric)
