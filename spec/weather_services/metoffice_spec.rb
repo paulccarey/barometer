@@ -151,7 +151,7 @@ describe "Metoffice" do
         YAML.load_file( File.expand_path( File.join( File.dirname(__FILE__), '../','fixtures','services', 'metoffice', 'sample_result.yaml') ) )
       end
 
-      it "should return the very rep values" do
+      it "should return the very first rep values" do
         WeatherService::Metoffice._current_result(result_set).should == { "__content__"=>"1080", "U"=>"1", "W"=>"1",
                                                                           "V"=>"GO", "T"=>"16", "S"=>"14", "Pp"=>"5",
                                                                           "H"=>"95", "G"=>"23", "F"=>"14", "D"=>"WNW"}
@@ -264,6 +264,25 @@ describe "Metoffice" do
 
       end
 
+
+    end
+
+    describe "_forecast_result" do
+
+      before(:each) do
+        result_set = YAML.load_file( File.expand_path( File.join( File.dirname(__FILE__), '../','fixtures','services', 'metoffice', 'sample_result.yaml') ) )
+        @current_result = WeatherService::Metoffice._forecast_result(result_set)
+      end
+
+      it "should return 6 periods" do
+        @current_result["Location"]["Period"].size.should ==6
+      end
+
+      it "should return 41 rep periods" do
+        @current_result["Location"]["Period"].collect do | period |
+          period["Rep"]
+        end.flatten.size.should == 41
+      end
 
     end
 

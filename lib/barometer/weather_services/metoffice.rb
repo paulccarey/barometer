@@ -36,7 +36,7 @@ module Barometer
       def _requires_keys?
         true
       end
-      
+
       def _supports_country?(query=nil)
         query = WebService::Geocode.fetch(query) if query.format == :coordinates
         query.country_code == "GB"
@@ -67,7 +67,11 @@ module Barometer
         data["Location"]["Period"].first["Rep"].first
       end
 
-      def _build_current(data,metric=true)
+      def _forecast_result(data=nil)
+        data
+      end
+
+      def _build_current(data, metric=true)
         raise ArgumentError unless data.is_a?(Hash)
         current = Measurement::Result.new(metric)
         unless data.blank?
@@ -93,11 +97,11 @@ module Barometer
       private
 
       def weather_type
-        @weather_type ||= YAML.load_file( File.expand_path( File.join(File.dirname(__FILE__), '..','translations', 'metoffice_weather_types.yml')) )
+        @weather_type ||= YAML.load_file(File.expand_path(File.join(File.dirname(__FILE__), '..', 'translations', 'metoffice_weather_types.yml')))
       end
 
       def visibility
-        @visibility ||= YAML.load_file( File.expand_path( File.join(File.dirname(__FILE__), '..','translations', 'metoffice_visibility.yml')) )
+        @visibility ||= YAML.load_file(File.expand_path(File.join(File.dirname(__FILE__), '..', 'translations', 'metoffice_visibility.yml')))
       end
 
     end
