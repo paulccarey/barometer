@@ -271,17 +271,50 @@ describe "Metoffice" do
 
       before(:each) do
         result_set = YAML.load_file( File.expand_path( File.join( File.dirname(__FILE__), '../','fixtures','services', 'metoffice', 'sample_result.yaml') ) )
-        @current_result = WeatherService::Metoffice._forecast_result(result_set)
+        @forecast_result = WeatherService::Metoffice._forecast_result(result_set)
       end
 
       it "should return 6 periods" do
-        @current_result["Location"]["Period"].size.should ==6
+        @forecast_result["Location"]["Period"].size.should == 6
       end
 
       it "should return 41 rep periods" do
-        @current_result["Location"]["Period"].collect do | period |
+        @forecast_result["Location"]["Period"].collect do | period |
           period["Rep"]
         end.flatten.size.should == 41
+      end
+
+    end
+
+    describe "_build_forecast" do
+
+      before(:each) do
+        @forecast_result_data = YAML.load_file( File.expand_path( File.join( File.dirname(__FILE__), '../','fixtures','services', 'metoffice', 'sample_result.yaml') ) )
+        @forecast = WeatherService::Metoffice._build_forecast(@forecast_result_data)
+      end
+
+      it "builds 41 forecast measurements" do
+        @forecast.size.should == 41
+      end
+
+      describe "forcast at on 31/07/12 at 330am" do
+
+        before(:each) do
+          @target_measurement = @forecast.for(Data::LocalDateTime.new(2012,07,31,03,30,00))
+        end
+
+        it "should return 8 mph for the wind speed" do
+          @target_measurement.wind.mph.should == 8
+        end
+
+        it "should return SE for wind direction" do
+          @target_measurement.wind.direction.should == "SE"
+        end
+
+        it "should reutrn Medium-level cloud for condition" do
+          @target_measurement.condition.should == "Medium-level cloud"
+        end
+
       end
 
     end

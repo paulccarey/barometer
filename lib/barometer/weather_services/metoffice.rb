@@ -1,3 +1,5 @@
+require "active_support"
+
 module Barometer
   #
   # = Met office Data Point
@@ -71,6 +73,30 @@ module Barometer
         data
       end
 
+      def _build_forecast(data=nil, metric=true)
+        forecasts = Measurement::ResultArray.new
+
+        data["Location"]["Period"].each do | period |
+          period_day = Data::LocalDateTime.parse(period["val"]).to_dt
+
+          period["Rep"].each do | forecast |
+            forecast_measurement = Measurement::Result.new(metric)
+
+            forecast_start=period_day+(forecast["__content__"].to_i / (24 * 60.0))
+            forecast_end=forecast_start+(180 / (24 * 60.0))
+
+            forecast_measurement.valid_start_date=Data::LocalDateTime.parse(forecast_start)
+            forecast_measurement.valid_end_date=Data::LocalDateTime.parse(forecast_end)
+
+            forecasts << populate_measurement(forecast_measurement,forecast,metric)
+
+          end
+
+        end
+
+        forecasts
+      end
+
       def _build_current(data, metric=true)
         raise ArgumentError unless data.is_a?(Hash)
         current = Measurement::Result.new(metric)
@@ -95,6 +121,28 @@ module Barometer
       end
 
       private
+
+      def populate_measurement(measurement,data, metric)
+        raise ArgumentError unless data.is_a?(Hash)
+        unless data.blank?
+          measurement.uv_index=data["U"].to_i
+          measurement.condition = weather_type[data["W"].to_i] unless data["W"].blank?
+          measurement.temperature=Data::Temperature.new(metric)
+          measurement.temperature.c=data["T"].to_i
+          measurement.humidity=data["H"].to_i
+          measurement.visibility = Data::Distance.new(metric)
+          measurement.visibility.km=visibility[data['V']]
+          measurement.wind = Data::Speed.new(metric)
+          measurement.wind.mph=data['S'].to_i
+          measurement.wind.direction=data['D']
+          measurement.pop=data['Pp'].to_i
+          measurement.wind_gust = Data::Speed.new(metric)
+          measurement.wind_gust.mph=data['G'].to_i
+          measurement.wind_chill=Data::Temperature.new(metric)
+          measurement.wind_chill.c=data["F"].to_i
+        end
+        measurement
+      end
 
       def weather_type
         @weather_type ||= YAML.load_file(File.expand_path(File.join(File.dirname(__FILE__), '..', 'translations', 'metoffice_weather_types.yml')))

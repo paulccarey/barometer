@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://partner.metoffice.gov.uk/public/val/wxfcs/all/xml/nearestlatlon?res=3hourly&lat=53.432996&lon=-3.078296&key=1ab12345-1a12-12a1-12a1-123456789123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/xml
+      date:
+      - Tue, 14 Aug 2012 22:55:24 GMT
+      server:
+      - Apache-Coyote/1.1
+      content-length:
+      - '150'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><error><msg>Invalid
+        key please register at http://www.metoffice.gov.uk/public/ddc</msg></error>
+    http_version: '1.1'
+  recorded_at: Tue, 14 Aug 2012 22:55:25 GMT
+recorded_with: VCR 2.2.4

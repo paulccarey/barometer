@@ -1,0 +1,143 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?region=&sensor=false&latlng=53.432996%2C-3.078296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Tue, 14 Aug 2012 22:55:25 GMT
+      expires:
+      - Wed, 15 Aug 2012 22:55:25 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"results\" : [\n      {\n         \"address_components\" :
+        [\n            {\n               \"long_name\" : \"56\",\n               \"short_name\"
+        : \"56\",\n               \"types\" : [ \"route\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Wallasey\",\n               \"short_name\"
+        : \"Wallasey\",\n               \"types\" : [ \"locality\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"Merseyside\",\n
+        \              \"short_name\" : \"Mersyd\",\n               \"types\" : [
+        \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"England\",\n               \"short_name\"
+        : \"England\",\n               \"types\" : [ \"administrative_area_level_1\",
+        \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"United Kingdom\",\n               \"short_name\" : \"GB\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"CH45\",\n               \"short_name\" : \"CH45\",\n               \"types\"
+        : [ \"postal_code_prefix\", \"postal_code\" ]\n            },\n            {\n
+        \              \"long_name\" : \"Wallasey\",\n               \"short_name\"
+        : \"Wallasey\",\n               \"types\" : [ \"postal_town\" ]\n            }\n
+        \        ],\n         \"formatted_address\" : \"56, Wallasey, Merseyside CH45,
+        UK\",\n         \"geometry\" : {\n            \"bounds\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 53.43382870,\n                  \"lng\" :
+        -3.07537870\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 53.42624619999999,\n                  \"lng\" : -3.09045290\n               }\n
+        \           },\n            \"location\" : {\n               \"lat\" : 53.42998540,\n
+        \              \"lng\" : -3.08258660\n            },\n            \"location_type\"
+        : \"APPROXIMATE\",\n            \"viewport\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 53.43382870,\n                  \"lng\" :
+        -3.07537870\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 53.42624619999999,\n                  \"lng\" : -3.09045290\n               }\n
+        \           }\n         },\n         \"types\" : [ \"route\" ]\n      },\n
+        \     {\n         \"address_components\" : [\n            {\n               \"long_name\"
+        : \"CH44 2HR\",\n               \"short_name\" : \"CH44 2HR\",\n               \"types\"
+        : [ \"postal_code\" ]\n            },\n            {\n               \"long_name\"
+        : \"Merseyside\",\n               \"short_name\" : \"Mersyd\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"United Kingdom\",\n               \"short_name\"
+        : \"GB\",\n               \"types\" : [ \"country\", \"political\" ]\n            }\n
+        \        ],\n         \"formatted_address\" : \"Merseyside CH44 2HR, UK\",\n
+        \        \"geometry\" : {\n            \"bounds\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 53.43807010,\n                  \"lng\" :
+        -3.05204930\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 53.40470430,\n                  \"lng\" : -3.091870\n               }\n
+        \           },\n            \"location\" : {\n               \"lat\" : 53.41186390,\n
+        \              \"lng\" : -3.08096150\n            },\n            \"location_type\"
+        : \"APPROXIMATE\",\n            \"viewport\" : {\n               \"northeast\"
+        : {\n                  \"lat\" : 53.43807010,\n                  \"lng\" :
+        -3.05204930\n               },\n               \"southwest\" : {\n                  \"lat\"
+        : 53.40470430,\n                  \"lng\" : -3.091870\n               }\n
+        \           }\n         },\n         \"types\" : [ \"postal_code\" ]\n      },\n
+        \     {\n         \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Wirral District\",\n               \"short_name\" : \"Wirral District\",\n
+        \              \"types\" : [ \"administrative_area_level_3\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"Merseyside\",\n
+        \              \"short_name\" : \"Mersyd\",\n               \"types\" : [
+        \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"England\",\n               \"short_name\"
+        : \"England\",\n               \"types\" : [ \"administrative_area_level_1\",
+        \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"United Kingdom\",\n               \"short_name\" : \"GB\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Wirral District, Merseyside, UK\",\n         \"geometry\" : {\n            \"bounds\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 53.44303780,\n
+        \                 \"lng\" : -2.92526220\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 53.29418610,\n                  \"lng\" :
+        -3.22904470\n               }\n            },\n            \"location\" :
+        {\n               \"lat\" : 53.37271810,\n               \"lng\" : -3.0737540\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 53.44303780,\n
+        \                 \"lng\" : -2.92526220\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 53.29418610,\n                  \"lng\" :
+        -3.22904470\n               }\n            }\n         },\n         \"types\"
+        : [ \"administrative_area_level_3\", \"political\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Merseyside\",\n               \"short_name\" : \"Mersyd\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"England\",\n               \"short_name\"
+        : \"England\",\n               \"types\" : [ \"administrative_area_level_1\",
+        \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"United Kingdom\",\n               \"short_name\" : \"GB\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Merseyside, UK\",\n         \"geometry\" : {\n            \"bounds\" :
+        {\n               \"northeast\" : {\n                  \"lat\" : 53.70433320,\n
+        \                 \"lng\" : -2.57662620\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 53.29418610,\n                  \"lng\" :
+        -3.22904470\n               }\n            },\n            \"location\" :
+        {\n               \"lat\" : 53.39760410,\n               \"lng\" : -2.94366430\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 53.70433320,\n
+        \                 \"lng\" : -2.57662620\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 53.29418610,\n                  \"lng\" :
+        -3.22904470\n               }\n            }\n         },\n         \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"United Kingdom\",\n               \"short_name\" : \"GB\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"United Kingdom\",\n         \"geometry\" : {\n            \"bounds\" :
+        {\n               \"northeast\" : {\n                  \"lat\" : 60.91134479999999,\n
+        \                 \"lng\" : 33.91655490\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 34.56412910,\n                  \"lng\" :
+        -8.649357199999999\n               }\n            },\n            \"location\"
+        : {\n               \"lat\" : 55.3780510,\n               \"lng\" : -3.4359730\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : {\n               \"northeast\" : {\n                  \"lat\" : 60.8565530,\n
+        \                 \"lng\" : 1.76270960\n               },\n               \"southwest\"
+        : {\n                  \"lat\" : 49.86694220,\n                  \"lng\" :
+        -8.649357199999999\n               }\n            }\n         },\n         \"types\"
+        : [ \"country\", \"political\" ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Tue, 14 Aug 2012 22:55:26 GMT
+recorded_with: VCR 2.2.4
